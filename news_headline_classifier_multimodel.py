@@ -1,17 +1,10 @@
 import pandas as pd
-
 import re
-
 import nltk
-
 from sklearn.feature_extraction.text import TfidfVectorizer
-
 from sklearn import model_selection, metrics
-
 from sklearn.linear_model import LogisticRegression
-
 from tensorflow.keras import Sequential
-
 from tensorflow.keras.layers import (
     Dense,
     Embedding,
@@ -22,16 +15,10 @@ from tensorflow.keras.layers import (
     Conv1D,
     MaxPooling1D,
 )
-
 from tensorflow.keras.callbacks import EarlyStopping
-
 from tensorflow.keras.preprocessing.text import Tokenizer
-
 from tensorflow.keras.preprocessing.sequence import pad_sequences
-
 from sentence_transformers import SentenceTransformer
-
-import numpy as np
 
 
 nltk.download("punkt")
