@@ -117,8 +117,8 @@ model.add(Embedding(8000, 128, input_length=X.shape[1]))  # better instead of fl
 # model.add(Dense(128, activation='relu')) # doesnt do anything
 # model.add(Flatten()) #trash and slow
 
-model.add(Dense(128, activation="relu"))
 model.add(GlobalAveragePooling1D())  # pretty good
+model.add(Dense(128, activation="relu"))
 model.add(Dense(1, activation="sigmoid"))
 model.compile(loss="binary_crossentropy", optimizer="adam", metrics=["accuracy"])
 # cross entropy loss function is for a binary classification
