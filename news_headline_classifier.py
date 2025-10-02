@@ -2,20 +2,20 @@ import pandas as pd
 import re
 import nltk
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn import model_selection
-from sklearn import metrics
-from keras import Sequential
-from keras.layers import Dense, Embedding, GlobalAveragePooling1D
-from keras.callbacks import EarlyStopping
+from sklearn import model_selection, metrics
 
-from keras.preprocessing.text import Tokenizer
-from keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras import Sequential
+from tensorflow.keras.layers import Dense, Embedding, GlobalAveragePooling1D
+from tensorflow.keras.callbacks import EarlyStopping
+from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+
 
 nltk.download("punkt")  # needed for nltk
 nltk.download("stopwords")  # needed for stopwords removal
 
 # Read csv into a pandas dataframe
-data = pd.read_csv("C:/Users/DX/Desktop/work/datamining/onion-or-not.csv")
+data = pd.read_csv("data/OnionOrNot.csv")
 
 
 def preprocessing(dataframe):
