@@ -298,10 +298,10 @@ def train_and_evaluate(model, X_train, X_test, y_train, y_test, model_name):
 def preprocess_for_bert(dataframe):
     """Minimal preprocessing for BERT - keep natural language intact!"""
 
-    # Just lowercase and basic cleanup - NO stemming, NO stopword removal
+    # Just nothing really. - NO stemming, NO stopword removal
 
-    texts = dataframe["text"].str.lower().str.strip()
-
+    # texts = dataframe["text"].str.lower().str.strip()
+    texts = dataframe["text"].str.strip()
     return texts.tolist()
 
 
@@ -317,7 +317,7 @@ def test_sentence_transformers(dataframe, target):
     models_to_test = [
         ("all-MiniLM-L6-v2", "Fast & Efficient (22M params)"),
         ("paraphrase-MiniLM-L3-v2", "Smallest & Fastest (17M params)"),
-        # ('all-mpnet-base-v2', 'Best Quality (110M params) - VERY SLOW'),  # Uncomment if you want best quality
+        # ("all-mpnet-base-v2", "Best Quality (110M params) - VERY SLOW"),  # Uncomment if you want best quality (still minor difference)
     ]
 
     bert_results = {}
@@ -401,12 +401,11 @@ models = [
 
 results = {}
 
-# for model, name in models:
-
-
-# history, y_pred = train_and_evaluate(model, X_train, X_test, y_train, y_test, name)
-
-# results[name] = metrics.accuracy_score(y_test, y_pred)
+choice = input("Train neural network models? y/n\n")
+if choice == "y":
+    for model, name in models:
+        history, y_pred = train_and_evaluate(model, X_train, X_test, y_train, y_test, name)
+        results[name] = metrics.accuracy_score(y_test, y_pred)
 
 
 # TF-IDF Model
