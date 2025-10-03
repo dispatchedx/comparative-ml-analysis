@@ -6,7 +6,7 @@ This repository contains a collection of Python scripts demonstrating various da
 
 ## Projects Overview
 
-### 1. News Headline Classifier ("The Onion" vs. Real News)
+### 1. Satirical News Headline Classifier ("The Onion" vs. Real News)
 
 This project tackles a binary text classification problem: determining whether a news headline is from the satirical publication "The Onion" or a legitimate news source.
 
