@@ -1,6 +1,6 @@
 # Data Mining & Machine Learning Projects
 
-This repository contains a collection of Python scripts demonstrating various data mining and machine learning techniques. The projects focus on data preprocessing, feature engineering, model training, and evaluation for both tabular and text-based data.
+This repository contains a collection of Python scripts demonstrating & benchmarking various data mining and machine learning techniques. The projects focus on data preprocessing, feature engineering, model training, and evaluation for both tabular and text-based data.
 
 ---
 
